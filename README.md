@@ -15,3 +15,8 @@ Create directory with full permission :
 Container volume  to new container:
 # docker run -d --volumes-from myjenkins2 --name myjenkins4 jenkins:latest
 # docker run -d --volumes-from myjenkins -p 9090:9090 --name myjenkins2 jenkins:latest
+
+docker cp container1 to container2:
+# docker cp index.html <containerid> /bin/bash
+# docker export <containerid> | gzip > backup.tar.gz
+# zcat backup.tar.gz | docker import – my backup 
